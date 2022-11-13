@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url(parallax.css);
+@import url(cliente_area.css);
+
+
+section.module.parallax-1 {
+    background-image: url(../img/capa.jpg)
+}
+/* 
+MENU */
+a:hover {
+    opacity: 0.7;
+  }
+  .menu_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto Condensed", sans-serif;
+    background: #23232e;
+    height: 8vh;
+  }
+  
+  .menu_menu nav li {
+    float: left;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  nav a:hover {
+    background-color: #98c663;
+    color: rgb(255, 255, 255);
+  }
+  nav{
+    z-index: 10;
+  }
+  nav a.ativo {
+    background-color: #1e333d;
+    color: rgb(255, 255, 255);
+  }
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  .nav-list a {
+    font-size: 12px;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+  
+  .mobile-menu {
+    display: flex;
+    justify-content: flex-start;
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: rgb(2, 2, 2);
+    margin: 8px;
+    transition: 0.3s;
+  }
+@media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      height: 92vh;
+      background: #fff;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translate(100%);
+      transition: transform 0.3s ease-in;
+      display: flex;
+    }
+  
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+  
+  .nav-list.active {
+    transform: translateX(0);
+    position: static;
+    align-items: center;
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(50);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+  /* SLIDE */
+  .content_slider{
+	width: 100%;
+}
+.slider{
+	position: relative;
+	width: 100%;
+	background: #2c3e50; 
+	overflow: hidden;
+}
+.myslide{
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	overflow: hidden;
+}
+
+.prev, .next{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 50px;
+	padding: 15px;
+	cursor: pointer;
+	color: #fff;
+	transition: 0.1s;
+	user-select: none;
+}
+.prev:hover, .next:hover{
+	color: #00a7ff; 
+}
+.next{
+	right: 0;
+	overflow: hidden;
+}
+.dotsbox{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 20px;
+	cursor: pointer;
+}
+.dot{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+.active, .dot:hover{
+	border-color: #00a7ff; /* blue */
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+
+.txt{
+	position: absolute;
+	color: #fff;
+	letter-spacing: 2px;
+	line-height: 35px;
+	top: 40%;
+	left: 15%;
+	-webkit-animation-name: posi;
+  	-webkit-animation-duration: 2s;
+  	animation-name: posi;
+  	animation-duration: 2s;
+	z-index: 1;
+}
+
+@-webkit-keyframes posi {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+@keyframes posi {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+.txt h1{
+	color: #ffffff; /* blue */
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+.txt p{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.myslide img{
+	transform: scale(1.5, 1.5);
+	-webkit-animation-name: zoomin;
+  	-webkit-animation-duration: 40s;
+  	animation-name: zoomin;
+  	animation-duration: 40s;
+	
+}
+@-webkit-keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.5, 1.5);}
+}
+
+
+@keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.5, 1.5);}
+}
+
+.topicos li {
+  font-size: 16px;
+}
+@media screen and (max-width: 800px){
+	.myslide{
+		height: 500px;
+	}
+	.txt{
+		letter-spacing: 2px;
+		line-height: 25px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-animation-name: posi2;
+		-webkit-animation-duration: 2s;
+		animation-name: posi2;
+		animation-duration: 2s;
+	}
+
+	@-webkit-keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+	@keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+	.txt h1{
+		font-size: 40px;
+	}
+	.txt p{
+		font-size: 13px;
+	}
+
+}
+
+@media screen and (max-width: 520px){
+	.txt h1{
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+	.sign{
+		margin-right: 20px;
+	}
+	.sign a{
+		font-size: 12px;
+	}
+}
+/* Topicos e Video */
+.topicos ul {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 26px;
+  }
+
+  .container_video{
+    display: flex;
+    justify-content: center;
+    background: #98c663;
+    border-bottom: 3px solid #1e333d;
+  }
+  /* RODAPÉ */
+.rodapé {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .rodape_logo img {
+    width: 400px;
+  }
+  
+  .image_footer {
+    padding-top: 2rem;
+  }
+  
+  .image_footer img {
+    width: 100%;
+    height: 30px;
+  }
+  
+  .rodape_rede_social {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    padding-bottom: 1rem;
+  }
+    
+  .rodape_rede_social a {
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    padding-left: 3rem;
+  }
+  
+  .rodape_rede_social i {
+    padding-right: 10px;
+  }
+  
+  .fa-whatsapp-square {
+    color: green;
+  }
+  
+  .fa-instagram-square {
+    color: rgba(193, 53, 132, 1);
+  }
+  
+  .fa-facebook-f {
+    color: #3b5998;
+  }
+ 
+  .direitos_autorais{
+    text-align: center;
+    margin: 0;
+  }
+  .whats {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    opacity: 0.5;
+  }
+
+@media screen and (max-width: 800px) {
+      .topicos li {
+        font-size: 18px;
+      }
+
+      .rodape_rede_social a{
+        font-size: 15px;
+      }
+      nav {
+        z-index: 3;
+    }
+     /*slide arrumado */
+     .content_slider img {
+      height: 45vw;
+      width: 100%;
+ 
+     }
+     .myslide.fade {
+      height:45vw;
+      width: 100%;
+     }
+     .myslide.fade h1 {
+      font-size:14px ;
+     }
+     .myslide.fade p {
+      font-size: 10px;
+     }
+     /*slide arrumado */
+    }
+
+@media screen and (max-width: 430px){
+
+      .rodape_rede_social {
+      flex-direction: column;
+      }
+    
+      .rodape_rede_social a {
+      font-size: 14px;
+      padding: 5px;
+      }
+    
+      .direitos_autorais {
+      padding-top: 10px;
+      font-size: 12px;
+      }
+      .topicos li {
+        font-size: 15px;
+      }
+      .rodape_logo img {
+        width: 300px;
+      }
+      .prev, .next{
+        font-size: 70%;
+      }
+      }
+@media screen and (max-width: 390px){
+    .rodape_rede_social{
+      flex-direction: column;
+    }
+    .rodape_rede_social a {
+        font-size: 14px;
+        padding: 5px;
+      }
+    .direitos_autorais{
+      padding-top: 10px;
+      font-size: 12px;
+    }
+     .topicos li {
+        font-size: 12px;
+        justify-content: space-evenly;
+      }
+      .topicos ul li {
+        padding-right: 7px;
+      }
+     .rodape_logo img {
+      width: 300px;
+      }
+      section.module p{
+        font-size: 12px;
+      }
+      /*slide arrumado */
+      .content_slider img {
+        height: 40vw;
+        width: 100%;
+   
+       }
+       .myslide.fade {
+        height:50vw;
+        width: 100%;
+       }
+       .myslide.fade h1 {
+        font-size:10px ;
+       }
+       .myslide.fade p {
+        display: none;
+       }
+       .prev, .next{
+        font-size: 70%;
+      }
+      .dotsbox span{
+        font-size: 70%;
+      }
+ }
+
+
+  @media screen and (max-width: 330px){
+    .topicos li {
+      font-size: 12px;
+      
+    }
+    .whats {
+      width: 65px;
+    }
+    .prev, .next{
+      font-size: 70%;
+    }
+    .container_video iframe{
+      width: 100%;
+      height: 100vw;
+    }
+  }

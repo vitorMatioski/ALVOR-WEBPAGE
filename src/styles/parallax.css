@@ -1,0 +1,198 @@
+@import url(home.css);
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #242424;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h2 {
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+main {
+    display: block;
+    background-color: #FFFF;
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+section.module p {
+    margin-bottom: 40px;
+    font-size: 15px;
+    color: #000;
+}
+
+section.module:last-child {
+    margin-bottom: 0;
+}
+
+section.module h2 {
+    margin-bottom: 40px;
+    font-size: 22px;
+}
+
+section.module.content {
+    padding: 40px 0;
+    background: #98c663;
+    border-bottom: 3px solid #1e333d;
+}
+
+nav {
+    overflow: hidden;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    float: left;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav a:hover {
+    background-color: #98c663;
+    color: rgb(255, 255, 255);
+}
+
+nav a.ativo {
+    background-color: #1E333D;
+    color: rgb(255, 255, 255);
+}
+
+.fixonotopo {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.fixonotopo+.pricipal {
+    padding-top: 60px;
+}
+
+section.module.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-backgroud-size: cover;
+    -moz-backgroud-size: cover;
+    -o-backgroud-size: cover;
+}
+
+section.module.parallax:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+    background: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0)10%, #000 200%);
+    background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0)10%, #000 200%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0)10%, #000 200%);
+}
+
+   @media screen and (max-width: 800px) {
+       .container {
+           padding: 0;
+       }
+       section.module h2 {
+        font-size: 20px;
+       }
+       section.module p{
+        font-size: 18px;
+        text-align: center;
+       }
+       section.module p{
+        font-size: 15px;
+      }
+       /*-------resolução do  parallax resposivo-------*/
+       section.module.parallax-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 45vw !important;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: contain;
+        -webkit-backgroud-size: contain;
+        -moz-backgroud-size: contain;
+        -o-backgroud-size: contain;
+       }
+       
+       section.module.parallax:after{
+        display: none;
+       }
+       /*----A capa fica de fora por questões de estética----*/
+       section.module.parallax-2,section.module.parallax-3,section.module.parallax-4,section.module.parallax-5,
+       section.module.parallax-6,section.module.parallax-7,section.module.parallax-8,section.module.parallax-9,
+       section.module.parallax-10,section.module.parallax-11,section.module.parallax-12,section.module.parallax-13,
+       section.module.parallax-14{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 45vw !important;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: local;
+        background-size: contain;
+        -webkit-backgroud-size: contain;
+        -moz-backgroud-size: contain;
+        -o-backgroud-size: contain;
+       }
+       /*-------resolução do  parallax resposivo-------*/
+
+      
+   }
+
+   @media screen and (max-width: 390px){
+    section.module h2{
+        font-size: 18px;
+    }
+    section.module p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+   }
+   @media  screen and (max-width:330px){
+    section.module h2 {
+        font-size: 18px;
+    } 
+  
+   }

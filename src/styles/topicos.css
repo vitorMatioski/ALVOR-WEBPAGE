@@ -1,0 +1,204 @@
+@import url(home.css);
+@import url(parallax.css);
+
+/*Seção topicos extras*/
+.servicos_gerais i {
+    padding-right: .5rem;
+}
+
+.content_topicos li {
+    list-style-type: none
+}
+
+.servicos_gerais h1 {
+    font-size: 20px;
+    text-align: center;
+    padding: .5rem;
+    font-weight: 700;
+}
+
+.servicos_gerais ul li {
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+    padding: .15rem;
+}
+
+.servicos_gerais {
+    display: flex;
+    justify-content: space-around;
+    padding-top: .5rem;
+    padding-left: .30rem;
+}
+
+/* Topografia */
+
+section.module.parallax-2 {
+    background-image: url(../img/Parallax/topografia/topografia-1.jpg);
+}
+section.module.parallax-3 {
+    background-image: url(../img/Parallax/topografia/topografia-2.jpg);
+}
+section.module.parallax-4 {
+    background-image: url(../img/Parallax/topografia/topografia-3.jpg);
+}
+/* Agricultura de precisão */
+
+section.module.parallax-5 {
+    background-image: url(../img/Parallax/agricultura/AP-1.jpg);
+}
+section.module.parallax-6 {
+    background-image: url(../img/Parallax/agricultura/Ap-2.jpg);
+}
+section.module.parallax-7 {
+    background-image: url(../img/Parallax/agricultura/Ap-3.jpg);
+}
+section.module.parallax-8 {
+    background-image: url(../img/Parallax/agricultura/Ap-4.jpg);
+}
+/* Imóveis */
+section.module.parallax-9 {
+    background-image: url(../img/Parallax/imoveis/imoveis-1.jpg);
+}
+section.module.parallax-10 {
+    background-image: url(../img/Parallax/imoveis/imoveis-2.jpg);
+}
+section.module.parallax-11 {
+    background-image: url(../img/Parallax/imoveis/imoveis-3.jpg);
+}
+/* Ambiental */
+
+section.module.parallax-12 {
+    background-image: url(../img/Parallax/ambiental/ambiental-1.jpg);
+}
+section.module.parallax-13 {
+    background-image: url(../img/Parallax/ambiental/ambiental-2.jpg);
+}
+section.module.parallax-14 {
+    background-image: url(../img/Parallax/ambiental/ambiental-3.jpg);
+}
+
+/* Cotação */
+.cotacao {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+
+}
+.cotacao div{
+    margin-right: 2rem;
+    padding-bottom: .5rem;
+}
+@media screen and (max-width: 800px) {
+    .topicos ul {
+        font-size: 18px;
+    }
+
+    .rodape_rede_social a {
+        font-size: 15px;
+    }
+    .cotacao {
+    flex-direction: column;
+    
+    }
+    .servicos_gerais{
+        display: flex;
+        flex-direction: column;
+    }
+    .servicos_gerais ul li {
+        font-size: 12px;
+    }
+    .servicos_gerais h1{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 430px){
+    .cotacao {
+        align-items: center;
+       
+    }
+    .rodape_rede_social {
+    flex-direction: column;
+    }
+
+    .rodape_rede_social a {
+    font-size: 14px;
+    padding: 5px;
+    }
+
+    .direitos_autorais {
+    padding-top: 10px;
+    font-size: 12px;
+    }
+    .servicos_gerais{
+        display: flex;
+        flex-direction: column;
+    }
+    .servicos_gerais ul li {
+        font-size: 11px;
+    }
+    section.module p{
+        font-size: 12px;
+    }
+    .servicos_gerais h1{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .rodape_rede_social {
+        flex-direction: column;
+    }
+
+    .rodape_rede_social a {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .direitos_autorais {
+        padding-top: 10px;
+        font-size: 12px;
+    }
+
+    .topicos ul {
+        font-size: 15px;
+        justify-content: space-between;
+    }
+
+    .topicos ul li {
+        padding-right: 8px;
+    }
+
+    .rodape_logo img {
+        width: 300px;
+    }
+    .cotacao {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 3rem;
+    }
+    .servicos_gerais{
+        display: flex;
+        flex-direction: column;
+    }
+    .servicos_gerais ul li {
+        font-size: 11px;
+    }
+    section.module p{
+        font-size: 12px;
+    }
+    .servicos_gerais h1{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 330px){
+    .servicos_gerais{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
